@@ -1,4 +1,4 @@
-# ⌨️ TypeRush – Typing Speed Test
+# ⌨️ TypeTesting – Typing Speed Test
  
 TypeRush is a sleek, feature-rich typing speed test application designed to help users improve their typing speed and accuracy. The application provides real-time WPM tracking, accuracy measurement, difficulty levels, grading system, dark/light mode, and local history tracking.
  
