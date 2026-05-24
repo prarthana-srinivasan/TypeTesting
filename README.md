@@ -122,7 +122,7 @@ Right-click index.html → Open with Live Server
  
 **Prarthana Srinivasan**
 Computer Science Engineering Student
-Project: TypeRush – Typing Speed Test
+Project: Type Testing
  
 ---
  
