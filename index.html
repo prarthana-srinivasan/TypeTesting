@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TypeRush – Typing Speed Test</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="logo">
+      <div class="logo-icon">⌨️</div>
+      <div>
+        <div class="logo-text">TypeRush</div>
+        <div class="logo-sub">Typing Speed Test</div>
+      </div>
+    </div>
+
+    <div class="header-right">
+      <!-- Difficulty Buttons -->
+      <div class="difficulty-btns">
+        <button class="diff-btn active" data-diff="easy">Easy</button>
+        <button class="diff-btn" data-diff="medium">Medium</button>
+        <button class="diff-btn" data-diff="hard">Hard</button>
+      </div>
+
+      <!-- Dark / Light Mode Toggle -->
+      <button class="theme-toggle" id="theme-toggle" title="Toggle theme">
+        <span class="theme-icon" id="theme-icon">🌙</span>
+        <span class="theme-label" id="theme-label">Dark</span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- Stats Bar -->
+    <div class="stats-bar">
+      <div class="stat-card">
+        <div class="stat-value" id="wpm-stat">0 <span>wpm</span></div>
+        <div class="stat-label">Speed</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value" id="acc-stat">100 <span>%</span></div>
+        <div class="stat-label">Accuracy</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value" id="correct-stat">0</div>
+        <div class="stat-label">Correct</div>
+      </div>
+      <div class="stat-card timer-card">
+        <div class="timer-wrap">
+          <svg width="80" height="80" viewBox="0 0 80 80">
+            <circle class="timer-bg" cx="40" cy="40" r="35"/>
+            <circle class="timer-fg" id="timer-ring" cx="40" cy="40" r="35"/>
+          </svg>
+          <div class="timer-num" id="timer-num">60</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Text Display -->
+    <div class="text-box">
+      <div id="words-display"></div>
+    </div>
+
+    <!-- Input Row -->
+    <div class="input-row">
+      <input
+        id="type-input"
+        type="text"
+        placeholder="Start typing to begin the test..."
+        autocomplete="off"
+        autocorrect="off"
+        autocapitalize="off"
+        spellcheck="false"
+      />
+      <button class="btn-restart" id="restart-btn">↺ Restart</button>
+    </div>
+
+    <!-- Results Panel -->
+    <div id="results">
+      <div class="result-title">Test Complete! 🎉</div>
+      <div class="result-sub" id="result-sub">Here's how you did</div>
+      <div id="result-badge" class="result-badge grade-a">Grade A</div>
+      <div class="result-grid">
+        <div class="result-item"><div class="result-val" id="r-wpm">0</div><div class="result-lbl">WPM</div></div>
+        <div class="result-item"><div class="result-val" id="r-acc">0%</div><div class="result-lbl">Accuracy</div></div>
+        <div class="result-item"><div class="result-val" id="r-correct">0</div><div class="result-lbl">Correct</div></div>
+        <div class="result-item"><div class="result-val" id="r-errors">0</div><div class="result-lbl">Errors</div></div>
+      </div>
+      <button class="btn-restart" id="results-restart-btn">Try Again →</button>
+    </div>
+
+    <!-- History -->
+    <div class="history-wrap">
+      <div class="history-header">
+        <div class="history-title">Your History</div>
+        <button class="clear-btn" id="clear-btn">Clear all</button>
+      </div>
+      <div id="history-list">
+        <div class="history-empty">No tests yet. Complete a test to see your history!</div>
+      </div>
+    </div>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
